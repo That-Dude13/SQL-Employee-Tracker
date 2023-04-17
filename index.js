@@ -2,12 +2,12 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 require('dotenv').config()
 const cTable = require('console.table');
-console.table([
+// console.table([
  
-    
-function init() 
-inquirer
-.prompt
+
+function init() {
+    inquirer
+        .prompt([
       {
         type: "list",
         message: "What would you like to do?",
