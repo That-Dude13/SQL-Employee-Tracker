@@ -1,8 +1,10 @@
+USE employee_tracker
+
 INSERT INTO department (id, name)
 VALUES (1, "Sales"),
        (2, "Engineering"),
        (3, "Finance"),
-       (4, "Legal"),
+       (4, "Legal");
 
  INSERT INTO role (title, department_id, salary)
  VALUES  ("Sales Lead", 1, 100000),
@@ -15,7 +17,7 @@ VALUES (1, "Sales"),
         ("Lawyer", 4, 190000);
 
     
-INSERT INTO employee (first_name, last_name, title, department, salary, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, department, salary, manager_id)
 VALUES  ("John", "Doe", "Sales Lead", "Sales", 100000, null),
         ("Mike", "Chan", "Sales person", "Sales", 100000, "John Doe" ),
         ("Ashley", "Rodriguez", "Lead Engineer", "Engineering", 150000, null),
