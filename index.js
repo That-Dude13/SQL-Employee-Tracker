@@ -1,17 +1,18 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+require('dotenv').config()
 const cTable = require('console.table');
 console.table([
  
-
-function init() {
-  inquirer
-    .prompt
+    
+function init() 
+inquirer
+.prompt
       {
         type: "list",
-        message: "Would you like to create a logo?",
-        name: "logo",     
-        choices: ["yes","no"],
+        message: "What would you like to do?",
+        name: "Employees",     
+        choices: ["View All Employees","Add Employee","Update Employee Role","View All Roles","Add Role","View All Departments","Add Department"],
 
       },
 
@@ -69,22 +70,22 @@ function init() {
     
     ])
 
-    .then (answers => {
-      const firstShape = new (eval(answers.firstShape))(answers.firstShapeColor);
-      const secondShape = new (eval(answers.secondShape))(answers.secondShapeColor);
-      const thirdShape = new (eval(answers.thirdShape))(answers.thirdShapeColor);
+    // .then (answers => {
+    //   const firstShape = new (eval(answers.firstShape))(answers.firstShapeColor);
+    //   const secondShape = new (eval(answers.secondShape))(answers.secondShapeColor);
+    //   const thirdShape = new (eval(answers.thirdShape))(answers.thirdShapeColor);
     
-      const svgContent = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
-          ${firstShape.render()}
-          ${secondShape.render()}
-          ${thirdShape.render()}
-        </svg>
-      `;
+    //   const svgContent = `
+    //     <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+    //       ${firstShape.render()}
+    //       ${secondShape.render()}
+    //       ${thirdShape.render()}
+    //     </svg>
+    //   `;
     
 
-      fs.writeFile("shapes.svg", svgContent, function(err, result) {
-        if(err) console.log('error', err);
-      });
-    })}
+    //   fs.writeFile("shapes.svg", svgContent, function(err, result) {
+    //     if(err) console.log('error', err);
+    //   });
+    // })}
   init();
