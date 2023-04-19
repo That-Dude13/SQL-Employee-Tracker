@@ -1,3 +1,3 @@
-SELECT *
-FROM role
-JOIN department ON name.department = role.id;
+-- SELECT *
+-- FROM role
+-- JOIN department ON name.department = role.id;
