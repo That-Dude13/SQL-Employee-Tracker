@@ -21,7 +21,7 @@ class EmployeeDB {
     }
 
     viewAllDepartments() {
-        const sql = `SELECT id, department_name AS title FROM department`;
+        const sql = `SELECT id, department name AS title FROM department`;
         return this.db.promise().query(sql);
     }
 

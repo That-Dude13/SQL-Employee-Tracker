@@ -2,9 +2,19 @@ const cTable = require('console.table');
 const inquirer = require("inquirer");
 require('dotenv').config()
 //get the client
-const db = require("./db");
+const db = require("./db/dbindex");
 
-
+console.table([
+    {
+      name: 'foo',
+      age: 10
+    }, {
+      name: 'bar',
+      age: 20
+    }
+  ]);
+  
+  
 async function userActionPrompt(){
     const response = await inquirer.prompt([
         {
