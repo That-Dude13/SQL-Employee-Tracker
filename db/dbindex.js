@@ -21,12 +21,12 @@ class EmployeeDB {
     }
 
     viewAllDepartments() {
-        const sql = `SELECT id, department name AS title FROM department`;
+        const sql = `SELECT id, name FROM department`;
         return this.db.promise().query(sql);
     }
 
     viewAllRoles() {
-        const sql = `SELECT id, role_name AS title FROM role`;
+        const sql = `SELECT id,  title  FROM role`;
         return this.db.promise().query(sql);
     }
 
@@ -35,16 +35,16 @@ class EmployeeDB {
         return this.db.promise().query(sql);
     }
 
-    addRoles(role_title, text) {
-        const sql = `INSERT INTO role role_title, review) VALUES (?, ?)`;
-        const params = [role_title, text];
+    addRoles(role, text) {
+        const sql = `INSERT INTO role tite,text) VALUES (?, ?)`;
+        const params = [role , text];
 
         return this.db.promise().query(sql,params);
     }
 
-    addEmployee(first_name, last_name, text) {
-        const sql = `INSERT INTO employee first_name, last_name, role_id, manager_id, text) VALUES (?, ?, ?)`;
-        const params = [first_name, last_name, text];
+    addEmployee(first_name, last_name, role_id, manager_id, text) {
+        const sql = `INSERT INTO employee first_name, last_name, role_id, manager_id, text) VALUES (?, ?, ?, ?)`;
+        const params = [first_name, last_name, role_id, manager_id, text];
 
         return this.db.promise().query(sql,params);
     }
