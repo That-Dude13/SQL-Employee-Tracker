@@ -28,4 +28,4 @@
   
   ![image](https://user-images.githubusercontent.com/117548139/233275935-c32cda78-e48f-4e60-ae5c-18daca9ea9e3.png)
 
-  https://drive.google.com/file/d/1zdBJ2FUAY1WIYrgeqltYXksCWNb1t-WV/view
+  https://drive.google.com/file/d/1zdBJ2FUAY1WIYrgeqltYXksCWNb1t-WV/view?usp=share_link
